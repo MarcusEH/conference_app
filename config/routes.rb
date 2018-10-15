@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     get '/speaker' => 'speakers#first_speaker'
     get '/speakers' => 'speakers#all_speakers'
     get '/allmeetings' => 'meetings#all_meetings'
-    get '/meeting/:title' => 'meetings#one_meeting'
+    get '/meeting' => 'meetings#one_meeting'
   end
 end
