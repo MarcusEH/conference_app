@@ -11,3 +11,6 @@
   speakerfaker = Speaker.new(first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, email: "#{FFaker::Name.first_name}#{FFaker::Name.last_name}@gmail.com")
   speakerfaker.save
 end
+
+meeting4 = Meeting.new({title: "Hop.js", agenda: "Hop.js: JavaScript Multitier Programming", time: "3:00 pm"})
+meeting4.save
