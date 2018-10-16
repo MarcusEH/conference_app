@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     get '/speaker' => 'speakers#first_speaker'
     get '/speakers' => 'speakers#all_speakers'
-    get '/allmeetings' => 'meetings#all_meetings'
-    get '/meeting' => 'meetings#one_meeting'
+    get '/meetings' => 'meetings#index'
+    get '/meeting/:id' => 'meetings#show'
   end
 end

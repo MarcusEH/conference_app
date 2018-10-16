@@ -1,11 +1,15 @@
 class Api::MeetingsController < ApplicationController
-  def all_meetings
+  def index
     @meetings = Meeting.all
-    render "meetings_view.json.jbuilder"
+    render "index.json.jbuilder"
   end
 
-  def one_meeting
-    @meeting = Meeting.first
-    render "individual_meeting_view.json.jbuilder"
+  def show
+    # @meeting = Meeting.first
+    meeting_id = params[:id]
+    @meeting = Meeting.find_by(id: meeting_id)
+    # render "individual_meeting_view.json.jbuilder"
+    render "show.json.jbuilder"
   end
+  
 end
