@@ -1,1 +1,0 @@
-json.meeting @meeting
