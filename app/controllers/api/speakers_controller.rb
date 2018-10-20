@@ -15,7 +15,9 @@ class Api::SpeakersController < ApplicationController
     @speaker = Speaker.new( 
       first_name: params[:input_first_name],
       last_name: params[:input_last_name],
-      email: params[:input_email]
+      email: params[:input_email],
+      gender: params[:input_gender],
+      age: params[:input_age]
       )
     @speaker.save
     render 'show.json.jbuilder'
@@ -27,6 +29,8 @@ class Api::SpeakersController < ApplicationController
     @speaker.first_name = params[:input_first_name] || @speaker.first_name
     @speaker.last_name = params[:input_last_name] || @speaker.last_name
     @speaker.email = params[:input_email] || @speaker.email
+    @speaker.gender = params[:input_gender] || @speaker.gender
+    @speaker.age = params[:input_age] || @speaker.age
     @speaker.save
     render 'show.json.jbuilder'
   end
