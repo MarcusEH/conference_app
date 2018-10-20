@@ -1,1 +1,0 @@
-json.speaker @speaker

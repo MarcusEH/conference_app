@@ -1,0 +1,1 @@
+json.message "You have successfully removed this meeting."
