@@ -15,11 +15,24 @@
 # meeting4 = Meeting.new({title: "Hop.js", agenda: "Hop.js: JavaScript Multitier Programming", time: "3:00 pm"})
 # meeting4.save
 
-speakers = Speaker.all
+# speakers = Speaker.all
 
-speakers.each do |speaker|
-  speaker.gender = ["female", "male"].sample
-  speaker.age = rand(18..100)
-  speaker.save
-  speaker.errors.full_messages
-end
+# speakers.each do |speaker|
+#   speaker.gender = ["female", "male"].sample
+#   speaker.age = rand(18..100)
+#   speaker.save
+#   speaker.errors.full_messages
+# end
+
+# meetings = Meeting.all
+
+# meetings.each do |meeting|
+#   if meeting.location == nil
+#     meeting.location = ["Tallahassee", "Chicago", "Toronto"].sample
+#   end
+#   if meeting.remote == nil
+#     meeting.remote = [true,false].sample
+#   end
+#   meeting.save
+
+# end

@@ -1,4 +1,4 @@
 class Meeting < ApplicationRecord
-  validates :title, :agenda, :time, presence: true 
-  validates
+  # validates :title, :agenda, :time, presence: true 
+  # validates
 end
