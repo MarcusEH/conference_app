@@ -20,8 +20,11 @@ class Api::MeetingsController < ApplicationController
       location: params[:input_location],
       remote: params[:input_remote]
       )
-    @meeting.save
-    render 'show.json.jbuilder'
+    if @meeting.save
+      render 'show.json.jbuilder'
+    else
+      render json: {error: @meeting.errors.full_messages} 
+    end
   end
 
   def update
@@ -31,8 +34,11 @@ class Api::MeetingsController < ApplicationController
     @meeting.time = params[:input_time] || @meeting.time
     @meeting.location = params[:input_location] || @meeting.location
     @meeting.remote = params[:input_remote] || @meeting.remote
-    @meeting.save
-    render 'show.json.jbuilder'
+    if @meeting.save
+      render 'show.json.jbuilder'
+    else
+      render json: {error: @meeting.errors.full_messages} 
+    end
   end
   
   def destroy
